@@ -62,10 +62,14 @@ input[type="text"] {
 .right {
     margin-top: 30px !important;
     margin-right: 15px;
-    border: 3px solid #b77d1c !important; /* Apply a solid border with color */
-    padding: 10px 20px; /* Optional: Add padding to make the button larger */
-    background-color: transparent; /* Optional: Make background transparent */
-    cursor: pointer; /* Change cursor to pointer when hovering */
+    border: 3px solid #b77d1c !important;
+    /* Apply a solid border with color */
+    padding: 10px 20px;
+    /* Optional: Add padding to make the button larger */
+    background-color: transparent;
+    /* Optional: Make background transparent */
+    cursor: pointer;
+    /* Change cursor to pointer when hovering */
     height: 40px;
     width: 120px;
 }
@@ -181,11 +185,17 @@ nav::after {
 
 .folder-item {
     display: flex;
-    align-items: center; /* Align items horizontally */
-    justify-content: space-between; /* Space between the icon, text, and button */
-    padding: 10px; /* Add space inside the box */
-    margin-bottom: 10px; /* Add some space between boxes */
-    border-radius: 8px; /* Optional: rounded corners */
+    align-items: center;
+    /* Align items horizontally */
+    justify-content: space-between;
+    /* Space between the icon, text, and button */
+    padding: 10px;
+    /* Add space inside the box */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* Add some space between boxes */
+    border-radius: 8px;
+    /* Optional: rounded corners */
     background-color: #727989;
     max-height: 60px;
 }
@@ -238,8 +248,10 @@ nav::after {
 }
 
 .delete-btn i {
-    font-size: 18px; /* Adjust the size of the icon */
-    color: #ff1900; /* Red color for the icon */
+    font-size: 18px;
+    /* Adjust the size of the icon */
+    color: #ff1900;
+    /* Red color for the icon */
 }
 
 @media screen and (max-width: 600px) {
@@ -268,9 +280,10 @@ nav::after {
     }
 
     input[type="text"] {
-        width: 170px;
+        width: 250px;
         margin: 5px;
         height: 38px;
+        margin-top: 20px;
     }
 
     .folders-background {
@@ -282,28 +295,35 @@ nav::after {
         font-size: 10px;
     }
 
+    .folder-item {
+        max-height: 50px;
+    }
+
+    .folder-text {
+        font-size: 13px;
+    }
+
+    .delete-btn i {
+        font-size: 15px;
+    }
+
     .right {
-        margin: 18px 5px 18px 0px;
-        font-size: 6px !important;
+        margin: 0px 0px 0px 0px;
+        margin-top: 0px !important;
+    }
+
+    .add-folder {
+        margin: 0px;
     }
 }
 
-.folder-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    /* Optional: Add rounded corners */
-}
 
 .folder-item:hover {
     background-color: rgba(0, 86, 179, 0.2);
     /* Change this color as needed */
 }
 
-#indicator{
+#indicator {
     color: #172034;
     font-family: "Poppins";
     font-size: 16px;
@@ -318,16 +338,32 @@ navigator {
 }
 
 #navigator span {
-    display: inline-block; /* Make the span an inline-block element */
-    position: relative; /* Needed to position the pseudo-element */
+    display: inline-block;
+    /* Make the span an inline-block element */
+    position: relative;
+    /* Needed to position the pseudo-element */
 }
 
 /* Add the line under the icon using the ::after pseudo-element */
 #navigator::after {
-    content: ""; /* Necessary to create the line */
-    display: block; /* Make the line a block element */
-    width: 100%; /* Set the width of the line to 80% */
-    height: 2px; /* Set the height (thickness) of the line */
-    background-color: #000; /* Set the color of the line (black in this case) */
-    margin: 5px auto 0; /* Center the line and add some space above it */
+    content: "";
+    /* Necessary to create the line */
+    display: block;
+    /* Make the line a block element */
+    width: 100%;
+    /* Set the width of the line to 80% */
+    height: 2px;
+    /* Set the height (thickness) of the line */
+    background-color: #000;
+    /* Set the color of the line (black in this case) */
+    margin: 5px auto 0;
+    /* Center the line and add some space above it */
+}
+
+.add-folder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Space between items */
+    justify-content: center;
 }
