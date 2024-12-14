@@ -1,0 +1,333 @@
+body {
+    background-color: #13213c;
+    /* Replace #f0f0f0 with your desired color */
+}
+
+.container {
+    width: 100%;
+    height: 650px;
+    background-color: #13213c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.add-folder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container input {
+    margin-right: 25px;
+    margin-top: 30px;
+}
+
+.container #folders {
+    align-self: flex-start;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+#folders>div {
+    margin-bottom: 10px;
+}
+
+.container p {
+    margin-bottom: 2px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 3px solid #b77d1c !important;
+    width: 300px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.container button {
+    padding: 10px 20px;
+    background-color: rgb(23, 32, 52);
+    color: #ffffff;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.right {
+    margin-top: 30px !important;
+    margin-right: 15px;
+    border: 3px solid #b77d1c !important; /* Apply a solid border with color */
+    padding: 10px 20px; /* Optional: Add padding to make the button larger */
+    background-color: transparent; /* Optional: Make background transparent */
+    cursor: pointer; /* Change cursor to pointer when hovering */
+    height: 40px;
+    width: 120px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.folders-background {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 80%;
+    height: 70%;
+    /* Set a fixed height */
+    overflow-y: auto;
+    /* Make it scrollable */
+    padding: 10px;
+    /* Optional: Add some padding */
+    margin-top: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    /* Centers the nav bar content */
+    align-items: center;
+    /* Centers vertically */
+    padding: 10px 0;
+    /* Add some padding for space */
+    position: relative;
+}
+
+.nav-center {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 11%;
+    /* To make the line 80% width, set it to 10% from the left */
+    width: 78%;
+    /* Line width */
+    height: 2px;
+    /* Line thickness */
+    background-color: #b77d1c;
+    /* Line color */
+}
+
+.btn {
+    padding: 8px 16px;
+    font-family: LEMONMILK-Light;
+    font-size: 12px;
+    background-color: rgb(23, 32, 52);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container1 {
+    width: 100%;
+    height: 545px;
+    background-color: rgba(28, 43, 76, 0.262);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 180px 0;
+}
+
+.title {
+    font-family: LEMONMILK-Bold;
+    font-size: 40px;
+    color: rgb(23, 32, 52);
+}
+
+.description {
+    font-family: Arial;
+    font-size: 14px;
+    color: #172034;
+}
+
+.start-btn {
+    background-color: rgb(23, 32, 52);
+    color: white;
+    font-family: LEMONMILK-Light;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 60px;
+    width: 120px;
+}
+
+.folder-item {
+    display: flex;
+    align-items: center; /* Align items horizontally */
+    justify-content: space-between; /* Space between the icon, text, and button */
+    padding: 10px; /* Add space inside the box */
+    margin-bottom: 10px; /* Add some space between boxes */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #727989;
+    max-height: 60px;
+}
+
+.folder-item::after {
+    content: "";
+    /* Empty content to create the line */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* Position the line from the center */
+    transform: translateX(-50%);
+    /* Offset the line to the left by half of its own width to truly center it */
+    width: 97%;
+    /* Set the width of the line */
+    border-bottom: 1px solid #13213c;
+    /* Add the line */
+}
+
+.folder-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.folder-text {
+    color: #ffffff;
+    flex-grow: 1;
+    /* Allows the folder name to take up available space */
+}
+
+
+.delete-btn {
+    background-color: rgba(217, 0, 0, 0) !important;
+    /* Red background for delete button */
+    border: none;
+    /* Remove button border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    /* Width of the delete button */
+    height: 30px;
+    /* Height of the delete button */
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.delete-btn i {
+    font-size: 18px; /* Adjust the size of the icon */
+    color: #ff1900; /* Red color for the icon */
+}
+
+@media screen and (max-width: 600px) {
+    .description {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .start-btn {
+        height: 50px;
+        width: 100px;
+    }
+
+    .nav-item {
+        margin: 0 1px;
+    }
+
+    .nav-right {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+    input[type="text"] {
+        width: 170px;
+        margin: 5px;
+        height: 38px;
+    }
+
+    .folders-background {
+        width: 90%;
+    }
+
+    .container button {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    .right {
+        margin: 18px 5px 18px 0px;
+        font-size: 6px !important;
+    }
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    /* Optional: Add rounded corners */
+}
+
+.folder-item:hover {
+    background-color: rgba(0, 86, 179, 0.2);
+    /* Change this color as needed */
+}
+
+#indicator{
+    color: #172034;
+    font-family: "Poppins";
+    font-size: 16px;
+}
+
+navigator {
+    text-align: center;
+}
+
+#navigator i {
+    color: #13213c;
+}
+
+#navigator span {
+    display: inline-block; /* Make the span an inline-block element */
+    position: relative; /* Needed to position the pseudo-element */
+}
+
+/* Add the line under the icon using the ::after pseudo-element */
+#navigator::after {
+    content: ""; /* Necessary to create the line */
+    display: block; /* Make the line a block element */
+    width: 100%; /* Set the width of the line to 80% */
+    height: 2px; /* Set the height (thickness) of the line */
+    background-color: #000; /* Set the color of the line (black in this case) */
+    margin: 5px auto 0; /* Center the line and add some space above it */
+}
